@@ -1680,11 +1680,14 @@ a {
     }
     
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
     
     .hero-subtitle {
-        font-size: 1.4rem;
+        font-size: 1.3rem;
+        height: auto;
+        min-height: 2.2rem;
+        margin-bottom: 1.2rem;
     }
     
     .main-header {
@@ -1698,27 +1701,45 @@ a {
     .navbar {
         position: absolute;
         top: var(--header-height);
-        left: -100%;
+        left: 0;
         width: 100%;
-        background: #060913;
+        height: calc(100vh - var(--header-height));
+        background: rgba(6, 9, 19, 0.98);
+        backdrop-filter: blur(24px);
+        -webkit-backdrop-filter: blur(24px);
         border-bottom: 1px solid var(--border-glass);
-        transition: var(--transition-smooth);
-        padding: 20px 24px;
+        padding: 40px 24px;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: opacity 0.35s ease, transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.35s;
+        overflow-y: auto;
     }
     
     .navbar.open {
-        left: 0;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
     }
     
     .nav-menu {
         flex-direction: column;
         align-items: stretch;
-        gap: 1.5rem;
+        gap: 1.75rem;
     }
     
     .nav-link {
         display: block;
-        padding: 0.5rem 0;
+        padding: 0.6rem 0;
+        font-size: 1.1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    }
+
+    .contact-btn-nav {
+        text-align: center;
+        margin-top: 1rem;
+        padding: 0.8rem;
     }
     
     .terminal-workspace {
@@ -1728,11 +1749,11 @@ a {
     .terminal-retrieved-sidebar {
         border-left: none;
         border-top: 1px solid var(--border-glass);
-        height: 180px;
+        height: 190px;
     }
     
     .terminal-container {
-        height: 580px;
+        height: 590px;
     }
     
     .section-header {
@@ -1763,5 +1784,162 @@ a {
     
     .modal-content-container {
         padding: 24px;
+    }
+}
+
+/* Fluid design scaling for small mobile screens & handhelds */
+@media (max-width: 576px) {
+    .section-container {
+        padding: 60px 16px;
+    }
+    
+    .section-title {
+        font-size: 1.8rem;
+    }
+    
+    .section-description {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+    }
+
+    .hero-container {
+        padding: 20px 16px;
+        gap: 30px;
+    }
+
+    .hero-badge {
+        font-size: 0.72rem;
+        padding: 4px 12px;
+    }
+
+    .hero-title {
+        font-size: 1.95rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.15rem;
+    }
+
+    .hero-description {
+        font-size: 0.95rem;
+    }
+
+    .hero-stats {
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        padding-top: 1.5rem;
+    }
+    
+    .stat-item {
+        flex-grow: 1;
+        min-width: 100px;
+    }
+
+    .stat-num {
+        font-size: 1.65rem;
+    }
+
+    .terminal-container {
+        height: 520px;
+    }
+
+    .terminal-input-panel {
+        padding: 10px 14px;
+    }
+
+    .terminal-prompt {
+        font-size: 0.75rem;
+    }
+
+    .terminal-input {
+        font-size: 0.75rem;
+    }
+
+    .console-line {
+        font-size: 0.78rem;
+    }
+
+    .empty-chunks-msg {
+        padding-top: 25px;
+        font-size: 0.75rem;
+    }
+
+    .modal-overlay {
+        padding: 12px;
+    }
+
+    .modal-card {
+        max-height: 95vh;
+    }
+
+    .modal-content-container {
+        padding: 18px;
+        padding-top: 40px; /* prevent close button overlaps */
+    }
+
+    .modal-title-row h2 {
+        font-size: 1.3rem;
+        line-height: 1.2;
+    }
+
+    .modal-title-row i {
+        font-size: 1.5rem;
+    }
+
+    .modal-subtitle-tech {
+        font-size: 0.75rem;
+    }
+
+    .arch-visual-container {
+        gap: 8px;
+    }
+
+    .arch-node {
+        font-size: 0.72rem;
+        padding: 8px 12px;
+    }
+
+    .contact-form-glass {
+        padding: 24px 18px;
+    }
+
+    .timeline-card {
+        padding: 16px;
+    }
+
+    .timeline-role {
+        font-size: 1rem;
+    }
+
+    .timeline-company {
+        font-size: 0.8rem;
+        padding: 2px 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-actions {
+        flex-direction: column;
+        width: 100%;
+        gap: 0.75rem;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+    }
+
+    .filter-controls {
+        flex-wrap: wrap;
+        gap: 6px;
+    }
+
+    .filter-btn {
+        font-size: 0.78rem;
+        padding: 6px 8px;
+    }
+
+    .query-chip {
+        font-size: 0.72rem;
+        padding: 5px 10px;
     }
 }
