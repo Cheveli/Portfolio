@@ -417,7 +417,7 @@ const VECTOR_CHUNKS = [
         id: "chunk_07",
         source: "Engineering Education & Training",
         score: "0.912",
-        text: "Graduated with a Bachelor of Engineering (B.E.) from Matrusri Engineering College (2019-2023) and holds professional certifications in Java Full Stack development (Hibernate, Spring Boot, JDBC)."
+        text: "Graduated with a Bachelor of Engineering in Civil Engineering from Matrusri Engineering College (2019-2023) and holds professional certifications in Java Full Stack development (Hibernate, Spring Boot, JDBC)."
     },
     {
         id: "chunk_08",
@@ -475,13 +475,13 @@ function initRagTerminal() {
             name: "bio",
             keywords: ['who', 'about', 'sai', 'kumar', 'bio', 'summary', 'profile', 'background', 'yourself', 'introduce', 'identity', 'person', 'cheveli'],
             chunks: ["chunk_01", "chunk_06", "chunk_07"],
-            response: "Cheveli Sai Kumar is an AI & Full-Stack Systems Specialist based in Hyderabad. He specializes in Generative AI, Retrieval-Augmented Generation (RAG) pipelines, Spring Boot, React, Next.js, and PostgreSQL. He is currently a Software Development Intern at Zensark Technologies and a graduate of Matrusri Engineering College (B.E.)."
+            response: "Cheveli Sai Kumar is an AI & Full-Stack Systems Specialist based in Hyderabad. He specializes in Generative AI, Retrieval-Augmented Generation (RAG) pipelines, Spring Boot, React, Next.js, and PostgreSQL. He is currently a Software Development Intern at Zensark Technologies and a graduate of Matrusri Engineering College (Bachelor of Engineering in Civil Engineering)."
         },
         {
             name: "education",
             keywords: ['education', 'college', 'study', 'studied', 'degree', 'university', 'matrusri', 'engineering', 'bachelor', 'school', 'academy', 'learn', 'certifications', 'certification', 'training', 'graduate', 'graduated', 'qualification', 'qualifications'],
             chunks: ["chunk_07", "chunk_01"],
-            response: "Sai Kumar graduated with a Bachelor of Engineering (B.E.) from Matrusri Engineering College (2019-2023). He also completed professional training and holds certifications in Java Full Stack development, specializing in Hibernate, Spring Boot, and JDBC structures."
+            response: "Sai Kumar graduated with a Bachelor of Engineering in Civil Engineering from Matrusri Engineering College (2019-2023). He also completed professional training and holds certifications in Java Full Stack development, specializing in Hibernate, Spring Boot, and JDBC structures."
         },
         {
             name: "experience",
